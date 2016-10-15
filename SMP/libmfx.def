@@ -21,14 +21,17 @@ MFXVideoENC_Init
 MFXVideoENC_Reset
 MFXVideoENC_Close
 MFXVideoENC_ProcessFrameAsync
+MFXVideoENC_GetVideoParam
 MFXVideoPAK_Query
 MFXVideoPAK_QueryIOSurf
 MFXVideoPAK_Init
 MFXVideoPAK_Reset
 MFXVideoPAK_Close
 MFXVideoPAK_ProcessFrameAsync
+MFXVideoPAK_GetVideoParam
 MFXVideoUSER_Register
 MFXVideoUSER_Unregister
+MFXVideoUSER_GetPlugin
 MFXVideoUSER_ProcessFrameAsync
 MFXVideoUSER_Load
 MFXVideoUSER_LoadByPath
@@ -53,6 +56,7 @@ MFXVideoCORE_SetBufferAllocator
 MFXVideoCORE_SetFrameAllocator
 MFXVideoCORE_SetHandle
 MFXVideoCORE_GetHandle
+MFXVideoCORE_QueryPlatform
 MFXVideoCORE_SyncOperation
 MFXVideoENCODE_Query
 MFXVideoENCODE_QueryIOSurf

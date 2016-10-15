@@ -39,9 +39,6 @@
     <ClInclude Include="..\src\mfx_load_plugin.h">
       <Filter>Header Files\src</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\mfx_plugin_cfg_parser.h">
-      <Filter>Header Files\src</Filter>
-    </ClInclude>
     <ClInclude Include="..\src\mfx_plugin_hive.h">
       <Filter>Header Files\src</Filter>
     </ClInclude>
@@ -63,9 +60,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\src\mfx_load_plugin.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\mfx_plugin_cfg_parser.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\src\mfx_plugin_hive.cpp">

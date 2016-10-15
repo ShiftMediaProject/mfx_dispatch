@@ -51,7 +51,6 @@
     <ClInclude Include="..\src\mfx_library_iterator.h" />
     <ClInclude Include="..\src\mfx_load_dll.h" />
     <ClInclude Include="..\src\mfx_load_plugin.h" />
-    <ClInclude Include="..\src\mfx_plugin_cfg_parser.h" />
     <ClInclude Include="..\src\mfx_plugin_hive.h" />
     <ClInclude Include="..\src\mfx_win_reg_key.h" />
   </ItemGroup>
@@ -65,7 +64,6 @@
     <ClCompile Include="..\src\mfx_library_iterator.cpp" />
     <ClCompile Include="..\src\mfx_load_dll.cpp" />
     <ClCompile Include="..\src\mfx_load_plugin.cpp" />
-    <ClCompile Include="..\src\mfx_plugin_cfg_parser.cpp" />
     <ClCompile Include="..\src\mfx_plugin_hive.cpp" />
     <ClCompile Include="..\src\mfx_win_reg_key.cpp" />
   </ItemGroup>
