@@ -271,9 +271,9 @@
       <SubSystem>Windows</SubSystem>
     </Lib>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-mkdir $(OutDir)\include\mfx
-copy ..\mfx\*.h $(OutDir)\include\mfx
+      <Command>mkdir "$(OutDir)"\include
+mkdir "$(OutDir)"\include\mfx
+copy ..\mfx\*.h "$(OutDir)"\include\mfx
 mkdir $(OutDir)\licenses
 copy ..\COPYING $(OutDir)\licenses\libmfx.txt</Command>
     </PostBuildEvent>
@@ -281,8 +281,8 @@ copy ..\COPYING $(OutDir)\licenses\libmfx.txt</Command>
       <Command>if exist ..\config.h (
 del ..\config.h
 )
-if exist $(OutDir)\include\mfx (
-rd /s /q $(OutDir)\include\mfx
+if exist "$(OutDir)"\include\mfx (
+rd /s /q "$(OutDir)"\include\mfx
 cd ../
 cd $(ProjectDir)
 )</Command>
@@ -292,8 +292,8 @@ cd $(ProjectDir)
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>force_clean</Outputs>
-      <Command>if exist $(OutDir)\include\mfx (
-rmdir /s /q $(OutDir)\include\mfx
+      <Command>if exist "$(OutDir)"\include\mfx (
+rmdir /s /q "$(OutDir)"\include\mfx
 )
 if exist $(OutDir)\licenses\libmfx.txt (
 del /f /q $(OutDir)\licenses\libmfx.txt
@@ -320,9 +320,9 @@ del /f /q $(OutDir)\licenses\libmfx.txt
       <SubSystem>Windows</SubSystem>
     </Lib>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-mkdir $(OutDir)\include\mfx
-copy ..\mfx\*.h $(OutDir)\include\mfx
+      <Command>mkdir "$(OutDir)"\include
+mkdir "$(OutDir)"\include\mfx
+copy ..\mfx\*.h "$(OutDir)"\include\mfx
 mkdir $(OutDir)\licenses
 copy ..\COPYING $(OutDir)\licenses\libmfx.txt</Command>
     </PostBuildEvent>
@@ -330,8 +330,8 @@ copy ..\COPYING $(OutDir)\licenses\libmfx.txt</Command>
       <Command>if exist ..\config.h (
 del ..\config.h
 )
-if exist $(OutDir)\include\mfx (
-rd /s /q $(OutDir)\include\mfx
+if exist "$(OutDir)"\include\mfx (
+rd /s /q "$(OutDir)"\include\mfx
 cd ../
 cd $(ProjectDir)
 )</Command>
@@ -341,8 +341,8 @@ cd $(ProjectDir)
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>force_clean</Outputs>
-      <Command>if exist $(OutDir)\include\mfx (
-rmdir /s /q $(OutDir)\include\mfx
+      <Command>if exist "$(OutDir)"\include\mfx (
+rmdir /s /q "$(OutDir)"\include\mfx
 )
 if exist $(OutDir)\licenses\libmfx.txt (
 del /f /q $(OutDir)\licenses\libmfx.txt
@@ -373,9 +373,9 @@ del /f /q $(OutDir)\licenses\libmfx.txt
       <MinimumRequiredVersion>5.1</MinimumRequiredVersion>
     </Link>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-mkdir $(OutDir)\include\mfx
-copy ..\mfx\*.h $(OutDir)\include\mfx
+      <Command>mkdir "$(OutDir)"\include
+mkdir "$(OutDir)"\include\mfx
+copy ..\mfx\*.h "$(OutDir)"\include\mfx
 mkdir $(OutDir)\licenses
 copy ..\COPYING $(OutDir)\licenses\libmfx.txt</Command>
     </PostBuildEvent>
@@ -383,8 +383,8 @@ copy ..\COPYING $(OutDir)\licenses\libmfx.txt</Command>
       <Command>if exist ..\config.h (
 del ..\config.h
 )
-if exist $(OutDir)\include\mfx (
-rd /s /q $(OutDir)\include\mfx
+if exist "$(OutDir)"\include\mfx (
+rd /s /q "$(OutDir)"\include\mfx
 cd ../
 cd $(ProjectDir)
 )</Command>
@@ -394,8 +394,8 @@ cd $(ProjectDir)
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>force_clean</Outputs>
-      <Command>if exist $(OutDir)\include\mfx (
-rmdir /s /q $(OutDir)\include\mfx
+      <Command>if exist "$(OutDir)"\include\mfx (
+rmdir /s /q "$(OutDir)"\include\mfx
 )
 if exist $(OutDir)\licenses\libmfx.txt (
 del /f /q $(OutDir)\licenses\libmfx.txt
@@ -424,9 +424,9 @@ del /f /q $(OutDir)\licenses\libmfx.txt
       <MinimumRequiredVersion>6.0</MinimumRequiredVersion>
     </Link>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-mkdir $(OutDir)\include\mfx
-copy ..\mfx\*.h $(OutDir)\include\mfx
+      <Command>mkdir "$(OutDir)"\include
+mkdir "$(OutDir)"\include\mfx
+copy ..\mfx\*.h "$(OutDir)"\include\mfx
 mkdir $(OutDir)\licenses
 copy ..\COPYING $(OutDir)\licenses\libmfx.txt</Command>
     </PostBuildEvent>
@@ -434,8 +434,8 @@ copy ..\COPYING $(OutDir)\licenses\libmfx.txt</Command>
       <Command>if exist ..\config.h (
 del ..\config.h
 )
-if exist $(OutDir)\include\mfx (
-rd /s /q $(OutDir)\include\mfx
+if exist "$(OutDir)"\include\mfx (
+rd /s /q "$(OutDir)"\include\mfx
 cd ../
 cd $(ProjectDir)
 )</Command>
@@ -445,8 +445,8 @@ cd $(ProjectDir)
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>force_clean</Outputs>
-      <Command>if exist $(OutDir)\include\mfx (
-rmdir /s /q $(OutDir)\include\mfx
+      <Command>if exist "$(OutDir)"\include\mfx (
+rmdir /s /q "$(OutDir)"\include\mfx
 )
 if exist $(OutDir)\licenses\libmfx.txt (
 del /f /q $(OutDir)\licenses\libmfx.txt
@@ -482,9 +482,9 @@ del /f /q $(OutDir)\licenses\libmfx.txt
       <SubSystem>Windows</SubSystem>
     </Lib>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-mkdir $(OutDir)\include\mfx
-copy ..\mfx\*.h $(OutDir)\include\mfx
+      <Command>mkdir "$(OutDir)"\include
+mkdir "$(OutDir)"\include\mfx
+copy ..\mfx\*.h "$(OutDir)"\include\mfx
 mkdir $(OutDir)\licenses
 copy ..\COPYING $(OutDir)\licenses\libmfx.txt</Command>
     </PostBuildEvent>
@@ -492,8 +492,8 @@ copy ..\COPYING $(OutDir)\licenses\libmfx.txt</Command>
       <Command>if exist ..\config.h (
 del ..\config.h
 )
-if exist $(OutDir)\include\mfx (
-rd /s /q $(OutDir)\include\mfx
+if exist "$(OutDir)"\include\mfx (
+rd /s /q "$(OutDir)"\include\mfx
 cd ../
 cd $(ProjectDir)
 )</Command>
@@ -503,8 +503,8 @@ cd $(ProjectDir)
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>force_clean</Outputs>
-      <Command>if exist $(OutDir)\include\mfx (
-rmdir /s /q $(OutDir)\include\mfx
+      <Command>if exist "$(OutDir)"\include\mfx (
+rmdir /s /q "$(OutDir)"\include\mfx
 )
 if exist $(OutDir)\licenses\libmfx.txt (
 del /f /q $(OutDir)\licenses\libmfx.txt
@@ -540,9 +540,9 @@ del /f /q $(OutDir)\licenses\libmfx.txt
       <SubSystem>Windows</SubSystem>
     </Lib>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-mkdir $(OutDir)\include\mfx
-copy ..\mfx\*.h $(OutDir)\include\mfx
+      <Command>mkdir "$(OutDir)"\include
+mkdir "$(OutDir)"\include\mfx
+copy ..\mfx\*.h "$(OutDir)"\include\mfx
 mkdir $(OutDir)\licenses
 copy ..\COPYING $(OutDir)\licenses\libmfx.txt</Command>
     </PostBuildEvent>
@@ -550,8 +550,8 @@ copy ..\COPYING $(OutDir)\licenses\libmfx.txt</Command>
       <Command>if exist ..\config.h (
 del ..\config.h
 )
-if exist $(OutDir)\include\mfx (
-rd /s /q $(OutDir)\include\mfx
+if exist "$(OutDir)"\include\mfx (
+rd /s /q "$(OutDir)"\include\mfx
 cd ../
 cd $(ProjectDir)
 )</Command>
@@ -561,8 +561,8 @@ cd $(ProjectDir)
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>force_clean</Outputs>
-      <Command>if exist $(OutDir)\include\mfx (
-rmdir /s /q $(OutDir)\include\mfx
+      <Command>if exist "$(OutDir)"\include\mfx (
+rmdir /s /q "$(OutDir)"\include\mfx
 )
 if exist $(OutDir)\licenses\libmfx.txt (
 del /f /q $(OutDir)\licenses\libmfx.txt
@@ -598,9 +598,9 @@ del /f /q $(OutDir)\licenses\libmfx.txt
       <SubSystem>Windows</SubSystem>
     </Lib>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-mkdir $(OutDir)\include\mfx
-copy ..\mfx\*.h $(OutDir)\include\mfx
+      <Command>mkdir "$(OutDir)"\include
+mkdir "$(OutDir)"\include\mfx
+copy ..\mfx\*.h "$(OutDir)"\include\mfx
 mkdir $(OutDir)\licenses
 copy ..\COPYING $(OutDir)\licenses\libmfx.txt</Command>
     </PostBuildEvent>
@@ -608,8 +608,8 @@ copy ..\COPYING $(OutDir)\licenses\libmfx.txt</Command>
       <Command>if exist ..\config.h (
 del ..\config.h
 )
-if exist $(OutDir)\include\mfx (
-rd /s /q $(OutDir)\include\mfx
+if exist "$(OutDir)"\include\mfx (
+rd /s /q "$(OutDir)"\include\mfx
 cd ../
 cd $(ProjectDir)
 )</Command>
@@ -619,8 +619,8 @@ cd $(ProjectDir)
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>force_clean</Outputs>
-      <Command>if exist $(OutDir)\include\mfx (
-rmdir /s /q $(OutDir)\include\mfx
+      <Command>if exist "$(OutDir)"\include\mfx (
+rmdir /s /q "$(OutDir)"\include\mfx
 )
 if exist $(OutDir)\licenses\libmfx.txt (
 del /f /q $(OutDir)\licenses\libmfx.txt
@@ -656,9 +656,9 @@ del /f /q $(OutDir)\licenses\libmfx.txt
       <SubSystem>Windows</SubSystem>
     </Lib>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-mkdir $(OutDir)\include\mfx
-copy ..\mfx\*.h $(OutDir)\include\mfx
+      <Command>mkdir "$(OutDir)"\include
+mkdir "$(OutDir)"\include\mfx
+copy ..\mfx\*.h "$(OutDir)"\include\mfx
 mkdir $(OutDir)\licenses
 copy ..\COPYING $(OutDir)\licenses\libmfx.txt</Command>
     </PostBuildEvent>
@@ -666,8 +666,8 @@ copy ..\COPYING $(OutDir)\licenses\libmfx.txt</Command>
       <Command>if exist ..\config.h (
 del ..\config.h
 )
-if exist $(OutDir)\include\mfx (
-rd /s /q $(OutDir)\include\mfx
+if exist "$(OutDir)"\include\mfx (
+rd /s /q "$(OutDir)"\include\mfx
 cd ../
 cd $(ProjectDir)
 )</Command>
@@ -677,8 +677,8 @@ cd $(ProjectDir)
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>force_clean</Outputs>
-      <Command>if exist $(OutDir)\include\mfx (
-rmdir /s /q $(OutDir)\include\mfx
+      <Command>if exist "$(OutDir)"\include\mfx (
+rmdir /s /q "$(OutDir)"\include\mfx
 )
 if exist $(OutDir)\licenses\libmfx.txt (
 del /f /q $(OutDir)\licenses\libmfx.txt
@@ -716,9 +716,9 @@ del /f /q $(OutDir)\licenses\libmfx.txt
       <MinimumRequiredVersion>5.1</MinimumRequiredVersion>
     </Link>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-mkdir $(OutDir)\include\mfx
-copy ..\mfx\*.h $(OutDir)\include\mfx
+      <Command>mkdir "$(OutDir)"\include
+mkdir "$(OutDir)"\include\mfx
+copy ..\mfx\*.h "$(OutDir)"\include\mfx
 mkdir $(OutDir)\licenses
 copy ..\COPYING $(OutDir)\licenses\libmfx.txt</Command>
     </PostBuildEvent>
@@ -726,8 +726,8 @@ copy ..\COPYING $(OutDir)\licenses\libmfx.txt</Command>
       <Command>if exist ..\config.h (
 del ..\config.h
 )
-if exist $(OutDir)\include\mfx (
-rd /s /q $(OutDir)\include\mfx
+if exist "$(OutDir)"\include\mfx (
+rd /s /q "$(OutDir)"\include\mfx
 cd ../
 cd $(ProjectDir)
 )</Command>
@@ -737,8 +737,8 @@ cd $(ProjectDir)
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>force_clean</Outputs>
-      <Command>if exist $(OutDir)\include\mfx (
-rmdir /s /q $(OutDir)\include\mfx
+      <Command>if exist "$(OutDir)"\include\mfx (
+rmdir /s /q "$(OutDir)"\include\mfx
 )
 if exist $(OutDir)\licenses\libmfx.txt (
 del /f /q $(OutDir)\licenses\libmfx.txt
@@ -775,9 +775,9 @@ del /f /q $(OutDir)\licenses\libmfx.txt
       <MinimumRequiredVersion>6.0</MinimumRequiredVersion>
     </Link>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-mkdir $(OutDir)\include\mfx
-copy ..\mfx\*.h $(OutDir)\include\mfx
+      <Command>mkdir "$(OutDir)"\include
+mkdir "$(OutDir)"\include\mfx
+copy ..\mfx\*.h "$(OutDir)"\include\mfx
 mkdir $(OutDir)\licenses
 copy ..\COPYING $(OutDir)\licenses\libmfx.txt</Command>
     </PostBuildEvent>
@@ -785,8 +785,8 @@ copy ..\COPYING $(OutDir)\licenses\libmfx.txt</Command>
       <Command>if exist ..\config.h (
 del ..\config.h
 )
-if exist $(OutDir)\include\mfx (
-rd /s /q $(OutDir)\include\mfx
+if exist "$(OutDir)"\include\mfx (
+rd /s /q "$(OutDir)"\include\mfx
 cd ../
 cd $(ProjectDir)
 )</Command>
@@ -796,8 +796,8 @@ cd $(ProjectDir)
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>force_clean</Outputs>
-      <Command>if exist $(OutDir)\include\mfx (
-rmdir /s /q $(OutDir)\include\mfx
+      <Command>if exist "$(OutDir)"\include\mfx (
+rmdir /s /q "$(OutDir)"\include\mfx
 )
 if exist $(OutDir)\licenses\libmfx.txt (
 del /f /q $(OutDir)\licenses\libmfx.txt
