@@ -43,6 +43,27 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\mfx\mfxastructures.h" />
+    <ClInclude Include="..\mfx\mfxaudio.h" />
+    <ClInclude Include="..\mfx\mfxbrc.h" />
+    <ClInclude Include="..\mfx\mfxcamera.h" />
+    <ClInclude Include="..\mfx\mfxcommon.h" />
+    <ClInclude Include="..\mfx\mfxdefs.h" />
+    <ClInclude Include="..\mfx\mfxenc.h" />
+    <ClInclude Include="..\mfx\mfxfei.h" />
+    <ClInclude Include="..\mfx\mfxfeihevc.h" />
+    <ClInclude Include="..\mfx\mfxjpeg.h" />
+    <ClInclude Include="..\mfx\mfxla.h" />
+    <ClInclude Include="..\mfx\mfxmvc.h" />
+    <ClInclude Include="..\mfx\mfxpak.h" />
+    <ClInclude Include="..\mfx\mfxplugin.h" />
+    <ClInclude Include="..\mfx\mfxsc.h" />
+    <ClInclude Include="..\mfx\mfxsession.h" />
+    <ClInclude Include="..\mfx\mfxstructures.h" />
+    <ClInclude Include="..\mfx\mfxvideo.h" />
+    <ClInclude Include="..\mfx\mfxvp8.h" />
+    <ClInclude Include="..\mfx\mfxvp9.h" />
+    <ClInclude Include="..\mfx\mfxvstructures.h" />
     <ClInclude Include="..\src\mfx_critical_section.h" />
     <ClInclude Include="..\src\mfx_dispatcher.h" />
     <ClInclude Include="..\src\mfx_dispatcher_log.h" />

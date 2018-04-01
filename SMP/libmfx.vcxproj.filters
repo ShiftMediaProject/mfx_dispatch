@@ -13,6 +13,9 @@
     <Filter Include="Header Files\src">
       <UniqueIdentifier>{60d0e8db-a653-43bc-852b-44f83e683787}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\mfx">
+      <UniqueIdentifier>{c01baeb4-5f4f-4824-9f9f-03731e488ec1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\mfx_critical_section.h">
@@ -44,6 +47,69 @@
     </ClInclude>
     <ClInclude Include="..\src\mfx_win_reg_key.h">
       <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mfx\mfxastructures.h">
+      <Filter>Header Files\mfx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mfx\mfxaudio.h">
+      <Filter>Header Files\mfx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mfx\mfxbrc.h">
+      <Filter>Header Files\mfx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mfx\mfxcamera.h">
+      <Filter>Header Files\mfx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mfx\mfxcommon.h">
+      <Filter>Header Files\mfx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mfx\mfxdefs.h">
+      <Filter>Header Files\mfx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mfx\mfxenc.h">
+      <Filter>Header Files\mfx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mfx\mfxfei.h">
+      <Filter>Header Files\mfx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mfx\mfxfeihevc.h">
+      <Filter>Header Files\mfx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mfx\mfxjpeg.h">
+      <Filter>Header Files\mfx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mfx\mfxla.h">
+      <Filter>Header Files\mfx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mfx\mfxmvc.h">
+      <Filter>Header Files\mfx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mfx\mfxpak.h">
+      <Filter>Header Files\mfx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mfx\mfxplugin.h">
+      <Filter>Header Files\mfx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mfx\mfxsc.h">
+      <Filter>Header Files\mfx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mfx\mfxsession.h">
+      <Filter>Header Files\mfx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mfx\mfxstructures.h">
+      <Filter>Header Files\mfx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mfx\mfxvideo.h">
+      <Filter>Header Files\mfx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mfx\mfxvp8.h">
+      <Filter>Header Files\mfx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mfx\mfxvp9.h">
+      <Filter>Header Files\mfx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mfx\mfxvstructures.h">
+      <Filter>Header Files\mfx</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
