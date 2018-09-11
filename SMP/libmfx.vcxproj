@@ -296,7 +296,7 @@
 mkdir "$(OutDir)"\include\mfx
 copy ..\mfx\*.h "$(OutDir)"\include\mfx
 mkdir $(OutDir)\licenses
-copy ..\COPYING $(OutDir)\licenses\libmfx.txt</Command>
+copy ..\LICENSE $(OutDir)\licenses\libmfx.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>if exist ..\config.h (
@@ -345,7 +345,7 @@ del /f /q $(OutDir)\licenses\libmfx.txt
 mkdir "$(OutDir)"\include\mfx
 copy ..\mfx\*.h "$(OutDir)"\include\mfx
 mkdir $(OutDir)\licenses
-copy ..\COPYING $(OutDir)\licenses\libmfx.txt</Command>
+copy ..\LICENSE $(OutDir)\licenses\libmfx.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>if exist ..\config.h (
@@ -398,7 +398,7 @@ del /f /q $(OutDir)\licenses\libmfx.txt
 mkdir "$(OutDir)"\include\mfx
 copy ..\mfx\*.h "$(OutDir)"\include\mfx
 mkdir $(OutDir)\licenses
-copy ..\COPYING $(OutDir)\licenses\libmfx.txt</Command>
+copy ..\LICENSE $(OutDir)\licenses\libmfx.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>if exist ..\config.h (
@@ -449,7 +449,7 @@ del /f /q $(OutDir)\licenses\libmfx.txt
 mkdir "$(OutDir)"\include\mfx
 copy ..\mfx\*.h "$(OutDir)"\include\mfx
 mkdir $(OutDir)\licenses
-copy ..\COPYING $(OutDir)\licenses\libmfx.txt</Command>
+copy ..\LICENSE $(OutDir)\licenses\libmfx.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>if exist ..\config.h (
@@ -507,7 +507,7 @@ del /f /q $(OutDir)\licenses\libmfx.txt
 mkdir "$(OutDir)"\include\mfx
 copy ..\mfx\*.h "$(OutDir)"\include\mfx
 mkdir $(OutDir)\licenses
-copy ..\COPYING $(OutDir)\licenses\libmfx.txt</Command>
+copy ..\LICENSE $(OutDir)\licenses\libmfx.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>if exist ..\config.h (
@@ -565,7 +565,7 @@ del /f /q $(OutDir)\licenses\libmfx.txt
 mkdir "$(OutDir)"\include\mfx
 copy ..\mfx\*.h "$(OutDir)"\include\mfx
 mkdir $(OutDir)\licenses
-copy ..\COPYING $(OutDir)\licenses\libmfx.txt</Command>
+copy ..\LICENSE $(OutDir)\licenses\libmfx.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>if exist ..\config.h (
@@ -623,7 +623,7 @@ del /f /q $(OutDir)\licenses\libmfx.txt
 mkdir "$(OutDir)"\include\mfx
 copy ..\mfx\*.h "$(OutDir)"\include\mfx
 mkdir $(OutDir)\licenses
-copy ..\COPYING $(OutDir)\licenses\libmfx.txt</Command>
+copy ..\LICENSE $(OutDir)\licenses\libmfx.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>if exist ..\config.h (
@@ -681,7 +681,7 @@ del /f /q $(OutDir)\licenses\libmfx.txt
 mkdir "$(OutDir)"\include\mfx
 copy ..\mfx\*.h "$(OutDir)"\include\mfx
 mkdir $(OutDir)\licenses
-copy ..\COPYING $(OutDir)\licenses\libmfx.txt</Command>
+copy ..\LICENSE $(OutDir)\licenses\libmfx.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>if exist ..\config.h (
@@ -741,7 +741,7 @@ del /f /q $(OutDir)\licenses\libmfx.txt
 mkdir "$(OutDir)"\include\mfx
 copy ..\mfx\*.h "$(OutDir)"\include\mfx
 mkdir $(OutDir)\licenses
-copy ..\COPYING $(OutDir)\licenses\libmfx.txt</Command>
+copy ..\LICENSE $(OutDir)\licenses\libmfx.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>if exist ..\config.h (
@@ -800,7 +800,7 @@ del /f /q $(OutDir)\licenses\libmfx.txt
 mkdir "$(OutDir)"\include\mfx
 copy ..\mfx\*.h "$(OutDir)"\include\mfx
 mkdir $(OutDir)\licenses
-copy ..\COPYING $(OutDir)\licenses\libmfx.txt</Command>
+copy ..\LICENSE $(OutDir)\licenses\libmfx.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>if exist ..\config.h (
