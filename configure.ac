@@ -1,6 +1,6 @@
 AC_PREREQ([2.53])
 
-AC_INIT([libmfx], [1.23])
+AC_INIT([libmfx], [1.27])
 AC_CONFIG_SRCDIR([src/mfx_dispatcher.cpp])
 AM_INIT_AUTOMAKE([foreign subdir-objects])
 
@@ -25,6 +25,37 @@ AS_CASE([${host_os}],
     ],
     [AC_MSG_ERROR([${host_os} not supported.])]
 )
+
+AS_CASE([${host_os}],
+    [mingw32uwp], [
+        AM_CONDITIONAL([WINDOWS_STORE], [true])
+        DLLIB="$(DLLIB) -ldxgi"
+    ],
+    [mingw32winrt], [
+        AM_CONDITIONAL([WINDOWS_STORE], [true])
+        DLLIB="$(DLLIB) -ldxgi"
+    ],
+    [
+        AM_CONDITIONAL([WINDOWS_STORE], [false])
+    ]
+)
+
+IMPORT_GFX_X86=false
+IMPORT_GFX_X64=false
+AS_IF([test -z "${WINDOWS_STORE_TRUE}"],[
+    AS_CASE([${host_cpu}],
+        [i?86],[
+            IMPORT_GFX_X86=true
+            DLLIB="$(DLLIB) -lintel_gfx_api-x86"
+        ],
+        [x86_64],[
+            IMPORT_GFX_X64=true
+            DLLIB="$(DLLIB) -lintel_gfx_api-x64"
+        ]
+)
+])
+AM_CONDITIONAL([DLLTOOL_X86], [test "${IMPORT_GFX_X86}" = "true"])
+AM_CONDITIONAL([DLLTOOL_X64], [test "${IMPORT_GFX_X64}" = "true"])
 
 PKG_HAVE_DEFINE_WITH_MODULES(LIBVA_DRM, [libva-drm])
 PKG_HAVE_DEFINE_WITH_MODULES(LIBVA_X11, [libva-x11])
