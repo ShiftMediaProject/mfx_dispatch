@@ -46,6 +46,11 @@ MFXInitEx
 MFXClose
 MFXQueryIMPL
 MFXQueryVersion
+MFXJoinSession
+MFXDisjoinSession
+MFXCloneSession
+MFXSetPriority
+MFXGetPriority
 MFXDoWork
 MFXVideoCORE_SetBufferAllocator
 MFXVideoCORE_SetFrameAllocator
