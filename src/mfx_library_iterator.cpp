@@ -172,7 +172,7 @@ DECLSPEC_NOINLINE HMODULE GetThisDllModuleHandle()
                       reinterpret_cast<LPCWSTR>(&GetThisDllModuleHandle), &hDll);
   return hDll;
 #else
-    // this should never be called with MEDIASDK_UWP_LOADER set
+    // this should never be called with MEDIASDK_UWP_DISPATCHER set
     return NULL;
 #endif
 }
@@ -188,16 +188,12 @@ bool GetImplPath(int storageID, msdk_disp_char* sImplPath)
     case MFX_APP_FOLDER:
         hModule = 0;
         break;
-
-#if defined(MEDIASDK_UWP_LOADER) || defined(MEDIASDK_UWP_PROCTABLE)
     case MFX_PATH_MSDK_FOLDER:
         hModule = GetThisDllModuleHandle();
         //It should works only if Dispatcher is linked with Dynamic Linked Library
         if (hModule != HMODULE(-1) && GetProcAddress(hModule, "DllMain") == NULL)
             return false;
         break;
-#endif
-
     }
 
     if(hModule == HMODULE(-1)) {
@@ -240,7 +236,7 @@ mfxStatus MFXLibraryIterator::Init(eMfxImplType implType, mfxIMPL implInterface,
     m_StorageID = storageID;
     m_lastLibIndex = 0;
 
-#if defined(MEDIASDK_USE_REGISTRY) || (!defined(MEDIASDK_UWP_LOADER) && !defined(MEDIASDK_UWP_PROCTABLE))
+#if !defined(MEDIASDK_UWP_DISPATCHER)
     if (storageID == MFX_CURRENT_USER_KEY || storageID == MFX_LOCAL_MACHINE_KEY)
     {
         return InitRegistry(implType, implInterface, adapterNum, storageID);
@@ -340,7 +336,7 @@ mfxStatus MFXLibraryIterator::InitFolder(eMfxImplType implType, mfxIMPL implInte
      return MFX_ERR_NONE;
 } // mfxStatus MFXLibraryIterator::InitFolder(eMfxImplType implType, mfxIMPL implInterface, const mfxU32 adapterNum, const msdk_disp_char * path, const int storageID)
 
-mfxStatus MFXLibraryIterator::SelectDLLVersion(wchar_t *pPath
+mfxStatus MFXLibraryIterator::SelectDLLVersion(msdk_disp_char *pPath
                                              , size_t pathSize
                                              , eMfxImplType *pImplType, mfxVersion minVersion)
 {
@@ -359,8 +355,6 @@ mfxStatus MFXLibraryIterator::SelectDLLVersion(wchar_t *pPath
         return MFX_ERR_NONE;
     }
 
-#if defined(MEDIASDK_UWP_LOADER) || defined(MEDIASDK_UWP_PROCTABLE)
-
     if (m_StorageID == MFX_PATH_MSDK_FOLDER)
     {
         if (m_lastLibIndex != 0)
@@ -373,7 +367,6 @@ mfxStatus MFXLibraryIterator::SelectDLLVersion(wchar_t *pPath
         // do not change impl type
         return MFX_ERR_NONE;
     }
-#endif
 
 #if !defined(MEDIASDK_UWP_DISPATCHER)
     wchar_t libPath[MFX_MAX_DLL_PATH] = L"";
@@ -553,7 +546,7 @@ mfxStatus MFXLibraryIterator::SelectDLLVersion(wchar_t *pPath
 
     return MFX_ERR_NONE;
 
-} // mfxStatus MFXLibraryIterator::SelectDLLVersion(wchar_t *pPath, size_t pathSize, eMfxImplType *pImplType, mfxVersion minVersion)
+} // mfxStatus MFXLibraryIterator::SelectDLLVersion(msdk_disp_char *pPath, size_t pathSize, eMfxImplType *pImplType, mfxVersion minVersion)
 
 mfxIMPL MFXLibraryIterator::GetImplementationType()
 {

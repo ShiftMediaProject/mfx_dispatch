@@ -161,7 +161,10 @@ mfxModuleHandle mfx_dll_load(const msdk_disp_char *pFileName)
 
     // load the library's module
 #if !defined(MEDIASDK_ARM_LOADER)
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
+    // this should never be called with MEDIASDK_UWP_LOADER set
     hModule = LoadLibraryExW(pFileName, NULL, 0);
+#endif
 #endif
 
 #if !defined(MEDIASDK_UWP_DISPATCHER)

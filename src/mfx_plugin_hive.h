@@ -90,7 +90,6 @@ namespace MFX {
         MFXPluginsInHive(int mfxStorageID, const msdk_disp_char *msdkLibSubKey, mfxVersion currentAPIVersion);
     };
 
-#if defined(MEDIASDK_USE_CFGFILES) || (!defined(MEDIASDK_UWP_LOADER) && !defined(MEDIASDK_UWP_PROCTABLE))
     //plugins are loaded from FS close to executable
     class MFXPluginsInFS : public MFXPluginStorageBase
     {
@@ -102,7 +101,6 @@ namespace MFX {
         bool ParseFile(FILE * f, PluginDescriptionRecord & des);
         bool ParseKVPair( msdk_disp_char *key, msdk_disp_char * value, PluginDescriptionRecord & des);
     };
-#endif //#if defined(MEDIASDK_USE_CFGFILES) || (!defined(MEDIASDK_UWP_LOADER) && !defined(MEDIASDK_UWP_PROCTABLE))
 
 #endif //#if !defined(MEDIASDK_UWP_DISPATCHER)
 

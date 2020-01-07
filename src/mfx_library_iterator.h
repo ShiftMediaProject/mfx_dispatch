@@ -65,15 +65,9 @@ enum
     MFX_CURRENT_USER_KEY        = 0,
     MFX_LOCAL_MACHINE_KEY       = 1,
     MFX_APP_FOLDER              = 2,
-#if defined(MEDIASDK_USE_REGISTRY) || (!defined(MEDIASDK_UWP_LOADER) && !defined(MEDIASDK_UWP_PROCTABLE))
-    MFX_PATH_MSDK_FOLDER = 3,
+    MFX_PATH_MSDK_FOLDER        = 3,
     MFX_STORAGE_ID_FIRST    = MFX_CURRENT_USER_KEY,
     MFX_STORAGE_ID_LAST     = MFX_PATH_MSDK_FOLDER
-#else
-    MFX_PATH_MSDK_FOLDER = 3,
-    MFX_STORAGE_ID_FIRST = MFX_PATH_MSDK_FOLDER,
-    MFX_STORAGE_ID_LAST = MFX_PATH_MSDK_FOLDER
-#endif // !defined(MEDIASDK_UWP_LOADER) && !defined(MEDIASDK_UWP_PROCTABLE)
 };
 #else
 enum
@@ -122,7 +116,7 @@ protected:
 
     // Initialize the registry iterator
     mfxStatus InitRegistry(eMfxImplType implType, mfxIMPL implInterface, const mfxU32 adapterNum, int storageID);
-    // Initialize the app folder iterator
+    // Initialize the app/module folder iterator
     mfxStatus InitFolder(eMfxImplType implType, mfxIMPL implInterface, const mfxU32 adapterNum, const msdk_disp_char * path, const int storageID);
 
 

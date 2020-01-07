@@ -45,9 +45,7 @@ void WinRegKey::Release(void)
     // close the opened key
     if (m_hKey)
     {
-#if defined(MEDIASDK_USE_REGISTRY) || (!defined(MEDIASDK_UWP_LOADER) && !defined(MEDIASDK_UWP_PROCTABLE))
         RegCloseKey(m_hKey);
-#endif
     }
 
     m_hKey = (HKEY) 0;
@@ -56,7 +54,6 @@ void WinRegKey::Release(void)
 
 bool WinRegKey::Open(HKEY hRootKey, const wchar_t *pSubKey, REGSAM samDesired)
 {
-#if defined(MEDIASDK_USE_REGISTRY) || (!defined(MEDIASDK_UWP_LOADER) && !defined(MEDIASDK_UWP_PROCTABLE))
     LONG lRes;
     HKEY hTemp;
 
@@ -84,9 +81,6 @@ bool WinRegKey::Open(HKEY hRootKey, const wchar_t *pSubKey, REGSAM samDesired)
     m_hKey = hTemp;
 
     return true;
-#else
-    return false;
-#endif
 
 } // bool WinRegKey::Open(HKEY hRootKey, const wchar_t *pSubKey, REGSAM samDesired)
 
@@ -97,7 +91,6 @@ bool WinRegKey::Open(WinRegKey &rootKey, const wchar_t *pSubKey, REGSAM samDesir
 } // bool WinRegKey::Open(WinRegKey &rootKey, const wchar_t *pSubKey, REGSAM samDesired)
 
 bool WinRegKey::QueryValueSize(const wchar_t *pValueName, DWORD type, LPDWORD pcbData) {
-#if defined(MEDIASDK_USE_REGISTRY) || (!defined(MEDIASDK_UWP_LOADER) && !defined(MEDIASDK_UWP_PROCTABLE))
     DWORD keyType = type;
     LONG lRes;
 
@@ -111,14 +104,10 @@ bool WinRegKey::QueryValueSize(const wchar_t *pValueName, DWORD type, LPDWORD pc
     }
 
     return true;
-#else
-    return false;
-#endif
 }
 
 bool WinRegKey::Query(const wchar_t *pValueName, DWORD type, LPBYTE pData, LPDWORD pcbData)
 {
-#if defined(MEDIASDK_USE_REGISTRY) || (!defined(MEDIASDK_UWP_LOADER) && !defined(MEDIASDK_UWP_PROCTABLE))
     DWORD keyType = type;
     LONG lRes;
     DWORD dstSize = (pcbData) ? (*pcbData) : (0);
@@ -175,15 +164,11 @@ bool WinRegKey::Query(const wchar_t *pValueName, DWORD type, LPBYTE pData, LPDWO
     }
 
     return true;
-#else
-    return false;
-#endif
 
 } // bool WinRegKey::Query(const wchar_t *pValueName, DWORD type, LPBYTE pData, LPDWORD pcbData)
 
 bool WinRegKey::EnumValue(DWORD index, wchar_t *pValueName, LPDWORD pcchValueName, LPDWORD pType)
 {
-#if defined(MEDIASDK_USE_REGISTRY) || (!defined(MEDIASDK_UWP_LOADER) && !defined(MEDIASDK_UWP_PROCTABLE))
     LONG lRes;
 
     // enum the values
@@ -195,15 +180,11 @@ bool WinRegKey::EnumValue(DWORD index, wchar_t *pValueName, LPDWORD pcchValueNam
     }
 
     return true;
-#else
-    return false;
-#endif
 
 } // bool WinRegKey::EnumValue(DWORD index, wchar_t *pValueName, LPDWORD pcchValueName, LPDWORD pType)
 
 bool WinRegKey::EnumKey(DWORD index, wchar_t *pValueName, LPDWORD pcchValueName)
 {
-#if defined(MEDIASDK_USE_REGISTRY) || (!defined(MEDIASDK_UWP_LOADER) && !defined(MEDIASDK_UWP_PROCTABLE))
     LONG lRes;
 
     // enum the keys
@@ -216,15 +197,11 @@ bool WinRegKey::EnumKey(DWORD index, wchar_t *pValueName, LPDWORD pcchValueName)
     }
 
     return true;
-#else
-    return false;
-#endif
 
 } // bool WinRegKey::EnumKey(DWORD index, wchar_t *pValueName, LPDWORD pcchValueName)
 
 bool WinRegKey::QueryInfo(LPDWORD lpcSubkeys)
 {
-#if defined(MEDIASDK_USE_REGISTRY) || (!defined(MEDIASDK_UWP_LOADER) && !defined(MEDIASDK_UWP_PROCTABLE))
     LONG lRes;
 
     lRes = RegQueryInfoKeyW(m_hKey, NULL, 0, 0, lpcSubkeys, 0, 0, 0, 0, 0, 0, 0);
@@ -233,9 +210,6 @@ bool WinRegKey::QueryInfo(LPDWORD lpcSubkeys)
         return false;
     }
     return true;
-#else
-    return false;
-#endif
 
 } //bool QueryInfo(LPDWORD lpcSubkeys);
 
