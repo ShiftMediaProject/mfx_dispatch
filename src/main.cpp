@@ -116,7 +116,7 @@ namespace
 
 using namespace MFX;
 
-#if defined(MEDIASDK_UWP_DISPATCHER)
+#if defined(MEDIASDK_UWP_LOADER)
 
 #ifdef __cplusplus
 extern "C" {
@@ -141,7 +141,7 @@ extern "C" {
 }; //extern "C"
 #endif /* __cplusplus */
 
-#endif // defined(MEDIASDK_UWP_DISPATCHER)
+#endif // defined(MEDIASDK_UWP_LOADER)
 
 
 #if !defined(MEDIASDK_UWP_DISPATCHER)
@@ -200,6 +200,9 @@ int HandleSort (const void * plhs, const void * prhs)
 
     return 0;
 }
+
+// for LEGACY and UWP_LOADER purposes implementation of MFXinitEx is traditionally loading
+// required libmfx*.dll and fill the array of API functions' with corresponded pointers to instantiated libmfx*.dll
 
 mfxStatus MFXInitEx(mfxInitParam par, mfxSession *session)
 {
@@ -345,6 +348,9 @@ mfxStatus MFXInitEx(mfxInitParam par, mfxSession *session)
     curImplIdx = implTypesRange[implMethod].minIndex;
     maxImplIdx = implTypesRange[implMethod].maxIndex;
 
+    // SOLID dispatcher checks if there are other available media sdk engines implementations in working dir
+    // UWP dispatcher does not use libraries other than in System32 folder
+#if !defined(MEDIASDK_UWP_DISPATCHER)
     // Load RT from app folder (libmfxsw64 with API >= 1.10)
     do
     {
@@ -406,6 +412,7 @@ mfxStatus MFXInitEx(mfxInitParam par, mfxSession *session)
         }
     } while ((MFX_ERR_NONE != mfxRes) && (++curImplIdx <= maxImplIdx));
 
+#endif // !defined(MEDIASDK_UWP_DISPATCHER)
 
     // Load HW and SW libraries using legacy default DLL search mechanism
     // set current library index again
@@ -525,11 +532,14 @@ mfxStatus MFXInitEx(mfxInitParam par, mfxSession *session)
                 hive.insert(hive.end(), plgsInHive.begin(), plgsInHive.end());
             }
 
+#if defined(MEDIASDK_USE_CFGFILES) || !defined(MEDIASDK_UWP_LOADER)
             // SOLID dispatcher also loads plug-ins from file system
             MFX::MFXPluginsInFS plgsInFS(apiVerActual);
             hive.insert(hive.end(), plgsInFS.begin(), plgsInFS.end());
+#endif // defined(MEDIASDK_USE_CFGFILES) || !defined(MEDIASDK_UWP_LOADER)
         }
 
+        // UWP dispatcher uses stubs
         pHandle->callPlugInsTable[eMFXVideoUSER_Load] = (mfxFunctionPointer)MFXVideoUSER_Load;
         pHandle->callPlugInsTable[eMFXVideoUSER_LoadByPath] = (mfxFunctionPointer)MFXVideoUSER_LoadByPath;
         pHandle->callPlugInsTable[eMFXVideoUSER_UnLoad] = (mfxFunctionPointer)MFXVideoUSER_UnLoad;
