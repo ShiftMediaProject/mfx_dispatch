@@ -1,6 +1,6 @@
 AC_PREREQ([2.53])
 
-AC_INIT([libmfx], [1.31])
+AC_INIT([libmfx], [1.32])
 AC_CONFIG_SRCDIR([src/mfx_dispatcher.cpp])
 AM_INIT_AUTOMAKE([foreign subdir-objects])
 
@@ -34,6 +34,20 @@ AS_CASE([${host_os}],
     [mingw32winrt], [
         AM_CONDITIONAL([WINDOWS_STORE], [true])
         DLLIB="$(DLLIB) -ldxgi"
+    ],
+    [mingw32], [
+        AC_PREPROC_IFELSE([AC_LANG_PROGRAM(
+          [[#include <winapifamily.h>
+           #if WINAPI_FAMILY_PARTITION (WINAPI_PARTITION_DESKTOP)
+           # error Win32 Desktop build
+           #endif
+          ]],[[;]])
+        ],[
+            AM_CONDITIONAL([WINDOWS_STORE], [true])
+            DLLIB="$(DLLIB) -ldxgi"
+        ],[
+            AM_CONDITIONAL([WINDOWS_STORE], [false])
+        ])
     ],
     [
         AM_CONDITIONAL([WINDOWS_STORE], [false])

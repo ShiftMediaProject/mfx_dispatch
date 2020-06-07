@@ -1,3 +1,5 @@
+cmake_minimum_required(VERSION 2.6)
+
 project( libmfx )
 
 # FIXME Adds support for using system/other install of intel media sdk
@@ -54,8 +56,6 @@ add_definitions(
 configure_file (${CMAKE_SOURCE_DIR}/libmfx.pc.cmake ${CMAKE_BINARY_DIR}/libmfx.pc @ONLY)
 
 add_library( mfx STATIC ${SOURCES} )
-file(GLOB MFX_HEADERS "${CMAKE_SOURCE_DIR}/mfx/*.h")
-install (FILES ${MFX_HEADERS} DESTINATION ${CMAKE_INSTALL_PREFIX}/include)
+install (DIRECTORY ${CMAKE_SOURCE_DIR}/mfx DESTINATION ${CMAKE_INSTALL_PREFIX}/include FILES_MATCHING PATTERN "*.h")
 install (FILES ${CMAKE_BINARY_DIR}/libmfx.pc DESTINATION ${CMAKE_INSTALL_PREFIX}/lib/pkgconfig)
 install (TARGETS mfx ARCHIVE DESTINATION ${CMAKE_INSTALL_PREFIX}/lib)
-cmake_minimum_required(VERSION 2.6)
