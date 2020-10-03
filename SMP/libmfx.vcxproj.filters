@@ -111,6 +111,9 @@
     <ClInclude Include="..\mfx\mfxvstructures.h">
       <Filter>Header Files\mfx</Filter>
     </ClInclude>
+    <ClInclude Include="..\src\mfx_driver_store_loader.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\mfx_dxva2_device.cpp">
@@ -144,6 +147,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\mfx_driver_store_loader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

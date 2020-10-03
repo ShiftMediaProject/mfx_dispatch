@@ -59,6 +59,7 @@
     <ClInclude Include="..\src\mfx_critical_section.h" />
     <ClInclude Include="..\src\mfx_dispatcher.h" />
     <ClInclude Include="..\src\mfx_dispatcher_log.h" />
+    <ClInclude Include="..\src\mfx_driver_store_loader.h" />
     <ClInclude Include="..\src\mfx_dxva2_device.h" />
     <ClInclude Include="..\src\mfx_exposed_functions_list.h" />
     <ClInclude Include="..\src\mfx_library_iterator.h" />
@@ -72,6 +73,7 @@
     <ClCompile Include="..\src\mfx_critical_section.cpp" />
     <ClCompile Include="..\src\mfx_dispatcher.cpp" />
     <ClCompile Include="..\src\mfx_dispatcher_log.cpp" />
+    <ClCompile Include="..\src\mfx_driver_store_loader.cpp" />
     <ClCompile Include="..\src\mfx_dxva2_device.cpp" />
     <ClCompile Include="..\src\mfx_function_table.cpp" />
     <ClCompile Include="..\src\mfx_library_iterator.cpp" />

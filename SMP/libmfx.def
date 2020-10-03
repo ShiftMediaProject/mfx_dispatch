@@ -1,4 +1,7 @@
 EXPORTS
+MFXQueryAdapters
+MFXQueryAdaptersDecode
+MFXQueryAdaptersNumber
 MFXAudioCORE_SyncOperation
 MFXAudioENCODE_Query
 MFXAudioENCODE_QueryIOSize
