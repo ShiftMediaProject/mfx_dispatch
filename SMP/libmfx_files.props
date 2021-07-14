@@ -33,6 +33,9 @@
     <ClInclude Include="..\src\mfx_load_plugin.h" />
     <ClInclude Include="..\src\mfx_plugin_hive.h" />
     <ClInclude Include="..\src\mfx_win_reg_key.h" />
+    <ClInclude Include="..\src\ts_ext_buffers_decl.h" />
+    <ClInclude Include="..\src\ts_struct_decl.h" />
+    <ClInclude Include="..\src\ts_typedef.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\main.cpp" />
